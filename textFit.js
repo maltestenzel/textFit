@@ -1,4 +1,5 @@
 /**
+CUSTOM TEXTFIT BY MALTE / SEE FORK 
  * textFit v2.3.1
  * Previously known as jQuery.textFit
  * 11/2014 by STRML (strml.github.com)
@@ -98,7 +99,7 @@
     originalHTML = el.innerHTML;
     originalWidth = innerWidth(el);
     originalHeight = innerHeight(el);
-    if (settings.height && !originalHeight) {
+    if (settings.height) {
       originalHeight = settings.height;
     }
 
