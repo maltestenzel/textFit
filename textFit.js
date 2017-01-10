@@ -40,6 +40,7 @@
     maxFontSize: 80,
     reProcess: true, // if true, textFit will re-process already-fit nodes. Set to 'false' for better performance
     widthOnly: false, // if true, textFit will fit text to element width, regardless of text height
+    height: null,
     alignVertWithFlexbox: false, // if true, textFit will use flexbox for vertical alignment
   };
 
@@ -97,6 +98,9 @@
     originalHTML = el.innerHTML;
     originalWidth = innerWidth(el);
     originalHeight = innerHeight(el);
+    if (settings.height && !originalHeight) {
+      originalHeight = settings.height;
+    }
 
     // Don't process if we can't find box dimensions
     if (!originalWidth || (!settings.widthOnly && !originalHeight)) {
